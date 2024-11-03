@@ -1,0 +1,240 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #19497b;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+header .logo img {
+    height: 100px;
+    margin-right: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding-right: 50px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.post-creator {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post-creator textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    resize: none;
+}
+
+.post-btn {
+    background-color: #19497b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.feed .post {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-pic-small {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-user-info h3 {
+    margin-bottom: 5px;
+}
+
+.post-content {
+    margin-bottom: 1rem;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.post-footer {
+    display: flex;
+    gap: 1rem;
+}
+
+.post-footer button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.post-footer button:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+.post-footer button:active {
+    transform: scale(0.95); /* Scale down effect on click */
+    transition: transform 0.1s ease; /* Smooth scaling transition */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #19497b;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    backdrop-filter: blur(5px); /* Blur background */
+}
+
+.modal-content {
+    background-color: white; /* White background for the content */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Border around the modal */
+    width: 300px; /* Width of the modal */
+    border-radius: 8px; /* Rounded corners */
+    position: relative; /* For absolute positioning of close button */
+    text-align: center; /* Center text inside the modal */
+}
+
+.close-btn {
+    color: #aaa; /* Close button color */
+    float: right; /* Align right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold font */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Darker color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.modal-profile-pic {
+    width: 100px; /* Profile picture size */
+    border-radius: 50%; /* Round image */
+    margin-bottom: 10px; /* Space below the image */
+}
+
+.message-list {
+    max-height: 300px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 10px; /* Space above the message list */
+}
+
+.message-item {
+    border-bottom: 1px solid #ddd; /* Divider between messages */
+    padding: 10px 0; /* Space around each message */
+}
+
+.message-item:last-child {
+    border-bottom: none; /* Remove border for the last message */
+}
+
+.notification-list {
+    max-height: 300px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 10px; /* Space above the notification list */
+}
+
+.notification-item {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between content and close button */
+    align-items: center; /* Align items vertically */
+    border-bottom: 1px solid #ddd; /* Divider between notifications */
+    padding: 10px 0; /* Space around each notification */
+}
+
+.notification-item:last-child {
+    border-bottom: none; /* Remove border for the last notification */
+}
+
+.remove-notification {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: red; /* Color for the remove icon */
+    font-weight: bold; /* Make the remove icon bold */
+    margin-left: 10px; /* Space to the left of the remove icon */
+}

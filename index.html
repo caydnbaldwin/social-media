@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Life Social - Feed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.jpeg" alt="NextGen Social Logo">
+            <h1>Real Life Social</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-creator">
+            <img src="assets/headshot.jpg" alt="Profile Picture" class="profile-pic">
+            <textarea placeholder="What's on your mind?" rows="3"></textarea>
+            <button class="post-btn">Post</button>
+        </section>
+
+        <section class="feed">
+            <!-- First post -->
+            <article class="post">
+                <div class="post-header">
+                    <img src="assets/headshot-2.jpg" alt="User 1" class="profile-pic-small">
+                    <div class="post-user-info">
+                        <h3>Pauline Poe</h3>
+                        <p>5 minutes ago</p>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Had an amazing day exploring the city! #adventure #fun</p>
+                    <img src="assets/post-1.jpg" alt="City" class="post-image">
+                </div>
+                <div class="post-footer">
+                    <button class="like-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+                    <button class="comment-btn"><i class="fas fa-comment"></i> Comment</button>
+                    <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+                </div>                
+            </article>
+
+            <!-- Second post -->
+            <article class="post">
+                <div class="post-header">
+                    <img src="assets/headshot-3.jpg" alt="User 2" class="profile-pic-small">
+                    <div class="post-user-info">
+                        <h3>Richard Roe</h3>
+                        <p>20 minutes ago</p>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Just tried the best burger in town! 🍔 #foodie</p>
+                    <img src="/assets/hamburger.webp" alt="Burger" class="post-image">
+                </div>
+                <div class="post-footer">
+                    <button class="like-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+                    <button class="comment-btn"><i class="fas fa-comment"></i> Comment</button>
+                    <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+                </div>                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Real Life Social. All rights reserved.</p>
+    </footer>
+
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="assets/headshot.jpg" alt="Profile Picture" class="modal-profile-pic">
+            <h2>John Doe</h2>
+            <p>Friends: <span id="friend-count">564</span></p>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeMessageModal">&times;</span>
+            <h2>Messages</h2>
+            <div class="message-list">
+                <div class="message-item">
+                    <p><strong>John Doe:</strong> Hey! How are you?</p>
+                </div>
+                <div class="message-item">
+                    <p><strong>Jane Smith:</strong> Don't forget our meeting tomorrow!</p>
+                </div>
+                <div class="message-item">
+                    <p><strong>Pauline Poe:</strong> Are you coming to the party?</p>
+                </div>
+                <div class="message-item">
+                    <p><strong>Richard Roe:</strong> Let's grab lunch sometime!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Modal -->
+    <div id="notificationsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeNotificationsModal">&times;</span>
+            <h2>Notifications</h2>
+            <div class="notification-list">
+                <div class="notification-item">
+                    <p><strong>John Doe</strong> liked your post. <span class="timestamp">2 minutes ago</span></p>
+                    <span class="remove-notification" onclick="removeNotification(this)">×</span>
+                </div>
+                <div class="notification-item">
+                    <p><strong>Jane Smith</strong> commented on your photo. <span class="timestamp">5 minutes ago</span></p>
+                    <span class="remove-notification" onclick="removeNotification(this)">×</span>
+                </div>
+                <div class="notification-item">
+                    <p><strong>Pauline Poe</strong> sent you a friend request. <span class="timestamp">10 minutes ago</span></p>
+                    <span class="remove-notification" onclick="removeNotification(this)">×</span>
+                </div>
+                <div class="notification-item">
+                    <p><strong>Richard Roe</strong> shared your post. <span class="timestamp">15 minutes ago</span></p>
+                    <span class="remove-notification" onclick="removeNotification(this)">×</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
